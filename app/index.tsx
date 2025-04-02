@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, Button, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Camera, CameraView, BarcodeScanningResult } from 'expo-camera';
 
 export default function BarcodeScanner() {
@@ -36,7 +36,7 @@ export default function BarcodeScanner() {
           style={StyleSheet.absoluteFillObject}
           onBarcodeScanned={handleBarCodeScanned}
           barcodeScannerSettings={{
-            barcodeTypes: ['ean13', 'qr', 'code128'],
+            barcodeTypes: ['ean13', 'ean8', 'qr', 'code128'],
           }}
         />
       ) : (
